@@ -1,5 +1,58 @@
 
 
+
+
+/* THIS IS ONLY FOR THE CONSOLE*/
+#console {
+    background:black;
+    color: green;
+    padding: 20px;
+    font-family:'Courier New', Courier, monospace;
+    width: 80%;
+    margin: auto;
+}
+
+#terminal{
+    border: 2px solid green;
+    padding: 10px;
+}
+
+#console-input{
+    background: black;
+    color: green;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+/* THIS IS ONLY FOR THE CONSOLE*/
+
+
+
+/* THIS IS ONLY FOR THE ANIMATIONS*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* THIS IS ONLY FOR THE ANIMATIONS*/
+
+
+
+
+
+
+
+
+
+
+
+/* THIS IS ONLY FOR THE BUTTONS */
 .botao-projeto{
     display: inline-block;
     padding: 10px 20px;
@@ -17,19 +70,35 @@
     color: white;
     transform: scale(1.1);
 }
+.light-mode{
+    background: white;
+    color: black;
+}
+.dark-mode{
+    background: black;
+    color: White;
+}
+/* THIS IS ONLY FOR THE BUTTON */
 
+/* THIS IS ONLY FOR THE PARAGRAPH*/
 .projetos p {
     font-size: 1.2rem;
     color: #00ff00;
     text-align: center;
 }
+/* THIS IS ONLY FOR THE PARAGRAPH*/
 
-footer{
+
+/* THIS IS ONLY FOR THE FOOTER */
+footer {
     margin-top: 50px;
     text-align: center;
     padding: 10px;
     background: rgba(0,255,0,0.2);
 }
+/* THIS IS ONLY FOR THE FOOTER */
+
+
 
 /* THIS IS ONLY FOR THE BODY */
 body {
