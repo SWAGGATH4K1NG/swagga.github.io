@@ -42,7 +42,30 @@
 }
 /* THIS IS ONLY FOR THE ANIMATIONS*/
 
+/* THIS IS ONLY FOR THE FORMULARY*/
 
+#contact{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* THIS IS ONLY FOR THE FORMULARY*/
 
 
 

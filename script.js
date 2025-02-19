@@ -26,7 +26,7 @@ document.getElementById("console-input").addEventListener("keypress", function(e
 
         if (command ==="!about me") response = "> Junior programming student and tech enthusiast.";
         if (command ==="!github") response = "> My github https://github.com/SWAGGATH4K1NG";
-        if (command ==="!help") response = "> Use the following commands [!about me, ! github]"
+        if (command ==="!help") response = "> Use the following commands [!about me, !github]"
 
         let consoleText = document.createElement("p");
         consoleText.textContent = `> ${command}`;
