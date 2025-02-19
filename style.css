@@ -1,3 +1,37 @@
+
+
+.botao-projeto{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #00ff00;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.botao-projeto:hover{
+    background:red;
+    color: white;
+    transform: scale(1.1);
+}
+
+.projetos p {
+    font-size: 1.2rem;
+    color: #00ff00;
+    text-align: center;
+}
+
+footer{
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0,255,0,0.2);
+}
+
+/* THIS IS ONLY FOR THE BODY */
 body {
     background-color: black;
     color: white;
@@ -19,7 +53,7 @@ body::before{
     z-index: -1;
     animation: matrix 10s linear infinite;
 }
-
+/* THIS IS ONLY FOR THE BODY */
 
 
 
