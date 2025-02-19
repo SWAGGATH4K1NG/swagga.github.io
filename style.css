@@ -1,0 +1,12 @@
+#titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+#titulo:hover{
+    text-shadow: 2px 2px red,-2px 2-px blue;
+    transform: translateX(2px);
+}
