@@ -45,11 +45,7 @@
     background:gray;
     border-radius: 5px;
 }
-.fill{
-    height: 10px;
-    background:green;
-    border-radius: 5px;
-}
+
 
 /* SKILL BAR EDIT*/
 
@@ -76,6 +72,17 @@
     outline: none;
     width: 100%;
 }
+
+.typing{
+    border-right: 2px solid white;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink{
+    from { border-right-color:white; }
+    to { border-right-color: transparent;}
+}
+
 /* THIS IS ONLY FOR THE CONSOLE*/
 
 

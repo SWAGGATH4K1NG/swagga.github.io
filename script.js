@@ -19,28 +19,7 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 });
 // THIS IS FOR THE TERMINAL
-document.getElementById("console-input").addEventListener("keypress", function(event){
-    if (event.key === "Enter") {
-        let command = this.value.toLocaleLowerCase();
-        let response = "> Command not founded!";
 
-        if (command ==="!aboutme") response = "> Junior programming student and tech enthusiast.";
-        if (command ==="!github") response = "> My github https://github.com/SWAGGATH4K1NG";
-        if (command ==="!help") response = "> Use the following commands [!about me, !github]"
-
-        let consoleText = document.createElement("p");
-        consoleText.textContent = `> ${command}`;
-        document.getElementById("terminal").appendChild(consoleText);
-
-        let consoleResponse = document.createElement("p");
-        consoleResponse.textContent = response;
-        document.getElementById("terminal").appendChild(consoleResponse);
-
-        this.value = ""; // Cleans the input
-
-    }
-
-});
 // THIS IS THE END OF THE TERMINAL
 
 
@@ -69,8 +48,6 @@ document.getElementById("toggle-theme").addEventListener("click", function() {
         lampIcon.classList.add("fa-lightbulb"); // ICON CHANGE TO DARK
     }
 });
-
-
 // PLUGIN OF THE LIGHT AND DARK MODE
 
 
@@ -84,3 +61,42 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
  //PLUGIN TO SAY MESSAGE SENDED
 
+// PLUGIN FOR WRITE ON THE CONSOLE 
+let consoleInput = document.getElementById("console-input");
+consoleInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        let command = this.value.toLowerCase();
+        let response = "> Command not known";
+        switch(command){
+            case "!aboutme":
+                response = "> Junior programming student and tech enthusiast.";
+                break;
+        }
+        switch(command){
+            case "!github":
+                response = "> My github https://github.com/SWAGGATH4K1NG";
+                break;
+        }   
+        switch(command){
+            case "!help":
+                response = "> Use the following commands [!about me, !github]";
+                break;
+        }   
+        
+        let typingEffect = document.createElement("p");
+        typingEffect.textContent = "> " + command;
+        typingEffect.classList.add("typing");
+        
+        document.getElementById("terminal").appendChild(typingEffect);
+
+        setTimeout(() => {
+            let consoleResponse = document.createElement("p");
+            consoleResponse.textContent = response;
+            document.getElementById("terminal").appendChild(consoleResponse);
+        }, 500);
+
+        this.value = "";
+    }
+});
+
+// PLUGIN FOR WRITE ON THE CONSOLE 
