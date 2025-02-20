@@ -99,3 +99,15 @@ consoleInput.addEventListener("keypress", function(event) {
 
 
 // PLUGIN FOR WRITE ON THE CONSOLE 
+
+
+// PRE LOADER
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("preloader").style.display = "none";
+    }, 2000);
+};
+
+
+
+// PRE LOADER
