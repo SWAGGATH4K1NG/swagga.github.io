@@ -54,49 +54,48 @@ document.getElementById("toggle-theme").addEventListener("click", function() {
 
 
 // PLUGIN TO SAY MESSAGE SEND
-document.getElementById("contact-form").addEventListener("submit", function(event){
-    event.preventDefault();
-    alert("Mensagem Enviada!");
- });
-
- //PLUGIN TO SAY MESSAGE SENDED
-
-// PLUGIN FOR WRITE ON THE CONSOLE 
 let consoleInput = document.getElementById("console-input");
 consoleInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         let command = this.value.toLowerCase();
         let response = "> Command not known";
-        switch(command){
+
+        switch (command) {
             case "!aboutme":
                 response = "> Junior programming student and tech enthusiast.";
                 break;
-        }
-        switch(command){
             case "!github":
                 response = "> My github https://github.com/SWAGGATH4K1NG";
                 break;
-        }   
-        switch(command){
             case "!help":
-                response = "> Use the following commands [!about me, !github]";
+                response = "> Use the following commands [!aboutme, !github, !help]";
                 break;
-        }   
-        
+        }
+
+        let terminal = document.getElementById("terminal");
+
+        // Cria um novo elemento para mostrar o comando digitado
         let typingEffect = document.createElement("p");
         typingEffect.textContent = "> " + command;
         typingEffect.classList.add("typing");
-        
-        document.getElementById("terminal").appendChild(typingEffect);
 
+        terminal.appendChild(typingEffect);
+
+        // Remove a classe typing após um tempo (para dar efeito de digitação)
+        setTimeout(() => {
+            typingEffect.classList.remove("typing");
+        }, 800);
+
+        // Cria um novo elemento para mostrar a resposta
         setTimeout(() => {
             let consoleResponse = document.createElement("p");
             consoleResponse.textContent = response;
-            document.getElementById("terminal").appendChild(consoleResponse);
-        }, 500);
+            terminal.appendChild(consoleResponse);
+        }, 1000);
 
         this.value = "";
     }
 });
+
 
 // PLUGIN FOR WRITE ON THE CONSOLE 

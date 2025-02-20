@@ -73,10 +73,14 @@
     width: 100%;
 }
 
-.typing{
-    border-right: 2px solid white;
+.typing {
+    display: inline-block;
+    min-width: 10px;
+    border-right: 4px solid white;
     animation: blink 0.8s infinite alternate;
 }
+
+
 
 @keyframes blink{
     from { border-right-color:white; }
