@@ -70,6 +70,13 @@ consoleInput.addEventListener("keypress", function(event) {
             case "!help":
                 response = "> Use the following commands [!aboutme, !github, !help]";
                 break;
+                case "!cls":
+                let terminal = document.getElementById("terminal");
+                terminal.querySelectorAll("p:not(.console-text)").forEach(p => p.remove());
+                response = ""
+                 break;
+
+            
         }
 
         let terminal = document.getElementById("terminal");
