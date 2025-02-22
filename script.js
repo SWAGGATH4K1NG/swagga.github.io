@@ -134,3 +134,9 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     
     // NOTIFICATIONS
 
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".page-animate").forEach((el) => {
+            el.classList.add("show");
+        });
+    });
+    

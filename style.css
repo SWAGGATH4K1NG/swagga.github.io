@@ -92,6 +92,27 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.page-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.light-mode .page-animate {
+    color: inherit; /* Mantém a cor já definida no light-mode */
+}
+
+.page-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* THIS IS ONLY FOR THE CURSOR*/
+body{
+    cursor: url;
+}
+/* THIS IS ONLY FOR THE CURSOR*/
+
 /* THIS IS ONLY FOR THE ANIMATIONS*/
 
 /* THIS IS ONLY FOR THE FORMULARY*/
