@@ -26,34 +26,39 @@ document.addEventListener("DOMContentLoaded",function() {
 
 
 // PLUGIN OF THE LIGHT AND DARK MODE
-document.getElementById("toggle-theme").addEventListener("click", function(){
-    document.body.classList.toggle("light-mode");
-});
+document.addEventListener("DOMContentLoaded", function () {
+    let lampIcon = document.getElementById("lamp-icon");
 
-document.getElementById("toggle-theme").addEventListener("click", function() {
-    document.body.classList.toggle("light-mode");
-    this.classList.toggle("active");
-});
-
-document.getElementById("toggle-theme").addEventListener("click", function() {
-    document.body.classList.toggle("light-mode");
-
-    // Change the lamp icon
-    let lampIcon = this.querySelector("i");
-    if (document.body.classList.contains("light-mode")) {
-        lampIcon.classList.remove("fa-lightbulb");
-        lampIcon.classList.add("fa-moon"); // MOON ICON CHANGE TO LIGHT
+    
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        lampIcon.style.color = "yellow";
     } else {
-        lampIcon.classList.remove("fa-moon");
-        lampIcon.classList.add("fa-lightbulb"); // ICON CHANGE TO DARK
+        document.body.classList.remove("light-mode");
+        lampIcon.style.color = "gray"; 
     }
+
+ 
+    lampIcon.addEventListener("click", function () {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            lampIcon.style.color = "yellow"; 
+            localStorage.setItem("theme", "light"); 
+        } else {
+            lampIcon.style.color = "gray";
+            localStorage.setItem("theme", "dark");
+        }
+    });
 });
+
+
 // PLUGIN OF THE LIGHT AND DARK MODE
 
 
 
 
-// PLUGIN TO SAY MESSAGE SEND
+// PLUGIN FOR WRITE ON THE CONSOLE 
 let consoleInput = document.getElementById("console-input");
 consoleInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -68,7 +73,7 @@ consoleInput.addEventListener("keypress", function(event) {
                 response = "> My github https://github.com/SWAGGATH4K1NG";
                 break;
             case "!help":
-                response = "> Use the following commands [!aboutme, !github, !help]";
+                response = "> Use the following commands [!aboutme, !github]";
                 break;
                 case "!cls":
                 let terminal = document.getElementById("terminal");
@@ -81,19 +86,19 @@ consoleInput.addEventListener("keypress", function(event) {
 
         let terminal = document.getElementById("terminal");
 
-        // Cria um novo elemento para mostrar o comando digitado
+        
         let typingEffect = document.createElement("p");
         typingEffect.textContent = "> " + command;
         typingEffect.classList.add("typing");
 
         terminal.appendChild(typingEffect);
 
-        // Remove a classe typing após um tempo (para dar efeito de digitação)
+        
         setTimeout(() => {
             typingEffect.classList.remove("typing");
         }, 800);
 
-        // Cria um novo elemento para mostrar a resposta
+       
         setTimeout(() => {
             let consoleResponse = document.createElement("p");
             consoleResponse.textContent = response;
@@ -108,13 +113,24 @@ consoleInput.addEventListener("keypress", function(event) {
 // PLUGIN FOR WRITE ON THE CONSOLE 
 
 
-// PRE LOADER
-window.onload = function() {
+// NOTIFICATIONS
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let popup = document.getElementById("contact-popup");
+    popup.classList.remove("hidden");
+    popup.classList.add("show");
+
+    ["name", "email", "message"].forEach(id => document.getElementById(id).value = "");
+
     setTimeout(() => {
-        document.getElementById("preloader").style.display = "none";
-    }, 2000);
-};
+        popup.classList.remove("show");
+        popup.classList.add("hidden");
+    }, 3000);
+});
+   // NOTIFICATIONS MESSAGE SEND 
 
 
+    
+    // NOTIFICATIONS
 
-// PRE LOADER

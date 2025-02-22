@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portefólio SWAGGA</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   </head>
   <body>
     <header>
@@ -18,12 +20,15 @@
     </section>
 <!-- PROJECTS -->
 
+<!-- NOTIFICATIONS -->
+<div id="notifications"></div>
+
+<!-- NOTIFICATIONS -->
+
+
 <!-- BUTTONS -->
-    <a href="#" class="botao-projeto">Meus Projetos</a>
-    <button id="toggle-theme">  
-      <i class="fas fa-lightbulb">
-      </i>
-    </button>
+<!-- <a href="#" class="botao-projeto">Meus Projetos</a>--> 
+    <i id="lamp-icon" class="fas fa-lightbulb"></i>
 <!-- BUTTONS -->
 
 <!-- TERMINAL TEXT -->
@@ -58,6 +63,7 @@
       <input type="email" id="email" placeholder="Your Email" required>
       <textarea id="message" placeholder="Your message"></textarea>
       <button type="submit">Submit</button>
+      <div id="contact-popup" class="hidden">Message sent!</div>
     </form>
 </section>
 <!-- FORMULARY -->
