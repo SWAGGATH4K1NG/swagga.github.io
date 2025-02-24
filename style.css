@@ -107,11 +107,6 @@
     transform: translateY(0);
 }
 
-/* THIS IS ONLY FOR THE CURSOR*/
-body{
-    cursor: url;
-}
-/* THIS IS ONLY FOR THE CURSOR*/
 
 /* THIS IS ONLY FOR THE ANIMATIONS*/
 
@@ -284,6 +279,9 @@ body {
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur21.ani), 
+           url(https://cur.cursors-4u.net/cursors/cur-1/cur21.png), 
+           auto !important;
 }
 
 
