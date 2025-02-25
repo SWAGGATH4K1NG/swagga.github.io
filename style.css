@@ -204,17 +204,45 @@ input:focus , textarea:focus {
 /* THIS IS ONLY FOR THE NOTIFICATIONS*/
 
 /* THIS IS ONLY FOR THE BUTTONS */
-@keyframes glitch {
-    0% { text-shadow: 2px 0 red, -2px 0 blue; }
-    25% { text-shadow: -2px 0 red, 2px 0 blue; }
-    50% { text-shadow: 2px 2px lime, -2px -2px magenta; }
-    75% { text-shadow: -2px -2px cyan, 2px 2px yellow; }
-    100% { text-shadow: 2px 0 red, -2px 0 blue; }
+#glitch-toggle {
+    font-family: 'Orbitron', sans-serif;
+    top: 20px;
+    right: 80px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border: 2px solid lime;
+    background: black;
+    color: lime;
+    cursor: pointer;
+    position: fixed;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+#glitch-toggle:hover {
+    box-shadow: 0 0 10px lime, 0 0 30px lime;
+    transform: scale(1.05);
+}
+
+
+@keyframes glitch-effect {
+    0% { text-shadow: 3px 3px red, -3px -3px blue; }
+    25% { text-shadow: -3px -3px red, 3px 3px blue; }
+    50% { text-shadow: 3px -3px blue, -3px 3px red; }
+    75% { text-shadow: -3px 3px blue, 3px -3px red; }
+    100% { text-shadow: 3px 3px red, -3px -3px blue; }
+}
+
+#glitch-toggle:hover {
+    animation: glitch-effect 0.2s infinite alternate;
 }
 
 .glitch-mode * {
-    animation: glitch 0.3s infinite;
+    animation: glitch-effect 0.3s infinite;
 }
+
 
 
 #lamp-icon {
