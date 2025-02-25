@@ -204,23 +204,19 @@ input:focus , textarea:focus {
 /* THIS IS ONLY FOR THE NOTIFICATIONS*/
 
 /* THIS IS ONLY FOR THE BUTTONS */
-.botao-projeto{
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: #00ff00;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: 0.3s ease;
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red, -2px 0 blue; }
+    25% { text-shadow: -2px 0 red, 2px 0 blue; }
+    50% { text-shadow: 2px 2px lime, -2px -2px magenta; }
+    75% { text-shadow: -2px -2px cyan, 2px 2px yellow; }
+    100% { text-shadow: 2px 0 red, -2px 0 blue; }
 }
 
-.botao-projeto:hover{
-    background:red;
-    color: white;
-    transform: scale(1.1);
+.glitch-mode * {
+    animation: glitch 0.3s infinite;
 }
+
+
 #lamp-icon {
     position: fixed;
     top: 20px;
@@ -282,6 +278,7 @@ body {
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur21.ani), 
            url(https://cur.cursors-4u.net/cursors/cur-1/cur21.png), 
            auto !important;
+    
 }
 
 
@@ -299,6 +296,7 @@ body::before{
     opacity: 0.15;
     z-index: -1;
     animation: matrix 10s linear infinite;
+    
 }
 
 

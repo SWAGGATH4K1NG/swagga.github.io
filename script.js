@@ -18,9 +18,17 @@ document.addEventListener("DOMContentLoaded",function() {
         escreverTexto();
     });
 });
-// THIS IS FOR THE TERMINAL
+// THIS IS FOR THE GLITCH BUTTON
+document.getElementById("glitch-toggle").addEventListener("click", function() {
+    document.body.classList.toggle("glitch-mode");
+});
 
-// THIS IS THE END OF THE TERMINAL
+
+
+
+
+
+// THIS IS FOR THE GLITCH BUTTON
 
 
 
