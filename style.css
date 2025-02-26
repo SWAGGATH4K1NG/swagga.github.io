@@ -283,6 +283,10 @@ input:focus , textarea:focus {
     
 }
 
+.light-mode, .dark-mode {
+    transition: background-color 1.2s ease-in-out, color 1.2s ease-in-out;
+
+}
 
 /* THIS IS ONLY FOR THE BUTTONS */
 
@@ -316,12 +320,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur21.ani), 
            url(https://cur.cursors-4u.net/cursors/cur-1/cur21.png), 
-           auto !important;
-
-transition: background-color 0.5s ease, color 0.5s ease;
-    
+           auto !important;  
 }
-
 
 @keyframes matrix {
     0% { background-position: 0 0; }
