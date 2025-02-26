@@ -81,7 +81,7 @@ consoleInput.addEventListener("keypress", function(event) {
                 response = "> My github https://github.com/SWAGGATH4K1NG";
                 break;
             case "!help":
-                response = "> Use the following commands [!aboutme, !github]";
+                response = "> Use the following commands [!aboutme, !github , !cls]";
                 break;
                 case "!cls":
                 let terminal = document.getElementById("terminal");

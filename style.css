@@ -99,7 +99,7 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 .light-mode .page-animate {
-    color: inherit; /* Mantém a cor já definida no light-mode */
+    color: inherit; 
 }
 
 .page-animate.show {
@@ -255,25 +255,36 @@ input:focus , textarea:focus {
     transition: color 0.3s ease-in-out, transform 0.2s;
 }
 
+#lamp-icon:hover {
+    color: yellow !important;
+}
+
 #lamp-icon:active {
-    transform: scale(0.9);
+    transform: scale(3);
+    
 }
 
 .light-mode {
     background: white;
     color: black;
+    
 }
 
 .light-mode h1, .light-mode h2, .light-mode p {
     color: black;
+    
+    
 }
+
+
 
 .dark-mode #lamp-icon {
     color: gray;
+    
 }
 
 
-/* THIS IS ONLY FOR THE BUTTON */
+/* THIS IS ONLY FOR THE BUTTONS */
 
 /* THIS IS ONLY FOR THE PARAGRAPH*/
 .projetos p {
@@ -306,6 +317,8 @@ body {
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur21.ani), 
            url(https://cur.cursors-4u.net/cursors/cur-1/cur21.png), 
            auto !important;
+
+transition: background-color 0.5s ease, color 0.5s ease;
     
 }
 
