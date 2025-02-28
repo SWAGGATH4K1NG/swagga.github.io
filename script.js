@@ -18,20 +18,65 @@ document.addEventListener("DOMContentLoaded",function() {
         escreverTexto();
     });
 });
+
+
+const pageanimate = [
+    "Welcome to my Portefolio",
+    "Web Dev and Mobile"
+];
+
+let index = 0;
+const titleElement = document.getElementById("pageanimate");
+
+function changepageanimate() {
+    index = (index + 1) % pageanimate.length;
+    titleElement.textContent = pageanimate[index]; 
+    titleElement.classList.add('show'); 
+}
+
+setInterval(changepageanimate, 3000);
+
+
+
+// THIS IS FOR LOADING SKILL BARS
+function animateSkills() {
+    let skills = document.querySelectorAll(".fill");
+
+    skills.forEach(skill => {
+        let fillValue = skill.style.width;
+        skill.style.width = "0%";
+        setTimeout(() => {
+            skill.style.width = fillValue;
+        }, 200);
+    });
+}
+
+function checkSkillsVisibility() {
+    let section = document.querySelector("#skills");
+    let sectionPosition = section.getBoundingClientRect().top;
+    let screenHeight = window.innerHeight;
+
+    if (sectionPosition < screenHeight) {
+        animateSkills();
+        window.removeEventListener("scroll", checkSkillsVisibility);
+    }
+}
+
+
+window.addEventListener("scroll", checkSkillsVisibility);
+// THIS IS FOR LOADING SKILL BAR
+
+
+
+
+
+
+
 // THIS IS FOR THE GLITCH BUTTON
 document.getElementById("glitch-toggle").addEventListener("click", function() {
     document.body.classList.toggle("glitch-mode");
 });
-
-
-
-
-
-
 // THIS IS FOR THE GLITCH BUTTON
-
-
-
 
 // PLUGIN OF THE LIGHT AND DARK MODE
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,8 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
 // PLUGIN OF THE LIGHT AND DARK MODE
 
 
@@ -94,14 +137,12 @@ consoleInput.addEventListener("keypress", function(event) {
 
         let terminal = document.getElementById("terminal");
 
-        
         let typingEffect = document.createElement("p");
         typingEffect.textContent = "> " + command;
         typingEffect.classList.add("typing");
 
         terminal.appendChild(typingEffect);
 
-        
         setTimeout(() => {
             typingEffect.classList.remove("typing");
         }, 800);
@@ -116,8 +157,6 @@ consoleInput.addEventListener("keypress", function(event) {
         this.value = "";
     }
 });
-
-
 // PLUGIN FOR WRITE ON THE CONSOLE 
 
 
@@ -136,15 +175,14 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         popup.classList.add("hidden");
     }, 3000);
 });
-   // NOTIFICATIONS MESSAGE SEND 
+// NOTIFICATIONS MESSAGE SEND 
 
 
-    
-    // NOTIFICATIONS
+// NOTIFICATIONS
 
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".page-animate").forEach((el) => {
             el.classList.add("show");
         });
     });
-    
+// NOTIFICATIONS  

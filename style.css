@@ -1,35 +1,35 @@
 
 
 /* SKILL BAR EDIT*/
-.bar{
-    width: 100%;
-    height: 10px;
-    background: #111;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 5px lime;
-}
 
 .fill{
-    height: 10px;
+    width: 0%;
+    height: 100%;
     background: lime;
     border-radius: 5px;
-    animation: load 2s ease-in;
+    animation: load 4s ease-in;
 }
 @keyframes load {
     from { width: 0;}
     to { width: 1;}
 }
 
+#skills{
+    margin-top: 500px;
+}
 
 .skill{
     margin: 10px 0;
 }
+
 .bar{
     width: 100%;
     height: 10px;
-    background:gray;
+    background: rgba(255,255,255,0.2);
+    overflow: hidden;
     border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px lime;
 }
 
 
@@ -99,9 +99,8 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 .light-mode .page-animate {
-    color: inherit; 
+    color: inherit;
 }
-
 .page-animate.show {
     opacity: 1;
     transform: translateY(0);
@@ -124,6 +123,7 @@
     flex-direction: column;
     max-width: 400px;
     margin: auto;
+    margin-bottom: 100px;
     
 }
 
@@ -301,13 +301,14 @@ input:focus , textarea:focus {
 
 /* THIS IS ONLY FOR THE FOOTER */
 footer {
-    position:fixed;
+    position:relative
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px;
     background: rgba(0,255,0,0.2);
+    z-index: 1;
 }
 /* THIS IS ONLY FOR THE FOOTER */
 
