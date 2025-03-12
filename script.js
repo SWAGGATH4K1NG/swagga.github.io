@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded",function() {
     document.querySelectorAll('.fade-in').forEach((element) => {
         element.classList.add('show');
     let titulo = document.getElementById("titulo");
-    let texto = "Hello, i am Luís Moreira";
+    let texto = "Hello, I am Luís Moreira";
     let index = 0;
-    
+
 
         function escreverTexto(){
             if (index < texto.length) {
