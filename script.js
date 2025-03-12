@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded",function() {
 
 const pageanimate = [
     "Welcome to my Portefolio",
-    "Web Dev and Mobile"
+    "Web Dev and Mobile",
+    "Full Stack Developer"
 ];
 
 let index = 0;
