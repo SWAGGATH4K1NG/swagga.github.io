@@ -112,52 +112,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // PLUGIN FOR WRITE ON THE CONSOLE 
 let consoleInput = document.getElementById("console-input");
+
 consoleInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         let command = this.value.toLowerCase();
         let response = "> Command not known";
+        let isHtml = false;
 
         switch (command) {
             case "!aboutme":
                 response = "> Junior programming student and tech enthusiast.";
                 break;
             case "!github":
-                response = "> My github https://github.com/SWAGGATH4K1NG";
+                response ='Check it out my Github: <a href="https://github.com/SWAGGATH4K1NG" target="_blank">https://github.com/SWAGGATH4K1NG</a>';
+                isHtml = true;
                 break;
             case "!help":
                 response = "> Use the following commands [!aboutme, !github , !cls]";
                 break;
-                case "!cls":
+            case "!cls":
                 let terminal = document.getElementById("terminal");
                 terminal.querySelectorAll("p:not(.console-text)").forEach(p => p.remove());
-                response = ""
-                 break;
-
-            
+                this.value = "";
+                return;
         }
 
         let terminal = document.getElementById("terminal");
 
+        
         let typingEffect = document.createElement("p");
         typingEffect.textContent = "> " + command;
         typingEffect.classList.add("typing");
-
         terminal.appendChild(typingEffect);
 
+        
         setTimeout(() => {
             typingEffect.classList.remove("typing");
         }, 800);
 
-       
+        
         setTimeout(() => {
             let consoleResponse = document.createElement("p");
-            consoleResponse.textContent = response;
+
+            if (isHtml) {
+                consoleResponse.innerHTML = response; 
+            } else {
+                consoleResponse.textContent = response; 
+            }
+
             terminal.appendChild(consoleResponse);
         }, 1000);
 
         this.value = "";
     }
 });
+
 // PLUGIN FOR WRITE ON THE CONSOLE 
 
 
